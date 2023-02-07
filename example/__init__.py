@@ -1,9 +1,9 @@
 from flask import Flask, request
 from flask.views import MethodView
+from flask_docs import SiwaDoc
 from pydantic import BaseModel
 
-from example.dto import LoginModel, UserModel, QueryModel
-from flask_siwadoc import SiwaDoc
+from example.dto import LoginModel, QueryModel, UserModel
 
 app = Flask(__name__)
 

@@ -1,6 +1,6 @@
 import inspect
 import re
-from typing import Type, List, Mapping, Any
+from typing import Type, List, Mapping, Any, Tuple
 
 from pydantic import BaseModel
 from pydantic.typing import Literal
@@ -22,7 +22,7 @@ def convert_query_params(query_prams: MultiDict, model: Type[BaseModel]) -> dict
     }
 
 
-def parse_path_params(route: str) -> (str, List):
+def parse_path_params(route: str) -> Tuple[str, List]:
     """
     解析路径参数
     :param route: /hello/<int(min=2):age>
